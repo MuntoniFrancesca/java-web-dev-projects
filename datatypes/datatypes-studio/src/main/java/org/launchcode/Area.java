@@ -7,11 +7,12 @@ public class Area {
         System.out.println("Enter a radius: ");
         Double radius = input.nextDouble();
 
-        if (radius > 0) {
+        while (radius > 0) {
             Double area = Circle.getArea(radius);
             System.out.println("The area of a circle of radius " + radius + " is: " + area);
-        } else {
+            break;
+        }
             System.out.println("Valid number required");
         }
     }
-}
+
