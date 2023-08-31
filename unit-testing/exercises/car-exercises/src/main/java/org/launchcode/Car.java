@@ -83,6 +83,7 @@ public void addGas(double gas) {
          * otherwise, if miles is not greater than maxDistance,
          * then milesAbleToTravel = miles
          */
+
         double milesAbleToTravel = miles > maxDistance ? maxDistance : miles;
         double gallonsUsed = milesAbleToTravel / this.milesPerGallon;
         this.gasTankLevel = this.gasTankLevel - gallonsUsed;
