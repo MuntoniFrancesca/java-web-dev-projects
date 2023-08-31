@@ -27,6 +27,18 @@ public class Menu {
     public ArrayList<MenuItem> getItems() {
         return items;
     }
+
+    public void AddMenuItem (MenuItem item) {
+        this.items.add(item);
+    }
+
+    public void RemoveMenuItem (MenuItem item) {
+        this.items.remove(item);
+    }
+
+    public Boolean equal(Objecy inputItem) {
+       return this.description.equals(inputItem.description)
+    }
 }
 
 

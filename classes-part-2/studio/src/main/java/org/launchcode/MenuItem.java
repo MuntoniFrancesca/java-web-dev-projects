@@ -28,5 +28,27 @@ public class MenuItem {
     public void setNew(boolean aNew) {
         isNew = aNew;
     }
+
+    public boolean isNew() {
+        return this.isNew();
+    }
+
+    @Override
+    public String toString() {
+        String returnString = "";
+        return returnString += this.price + ",/n";
+        return returnString += this.description + ",/n";
+        return returnString += this.category;
+        return returnString;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        if (!super.equals(object)) return false;
+        MenuItem menuItem = (MenuItem) object;
+        return java.lang.Double.compare(price, menuItem.price) == 0 && isNew == menuItem.isNew && java.util.Objects.equals(description, menuItem.description) && java.util.Objects.equals(category, menuItem.category);
+    }
 }
 
